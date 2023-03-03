@@ -1,0 +1,267 @@
+.blog-post-container {
+  &__title {
+    max-width: 875px;
+
+    h1 {
+      color: $color-text-800;
+      margin: 32px 0px;
+
+      @include mobile {
+        margin: 16px 0px;
+      }
+    }
+
+    p {
+      margin: 0px;
+      margin-bottom: 16px;
+
+      font-size: 1.125rem;
+      color: $color-gray-text;
+
+      @include tablet {
+        margin-bottom: 24px;
+      }
+    }
+  }
+
+  &__post-info {
+    display: flex;
+    gap: 48px;
+
+    margin-bottom: 56px;
+
+    @include mobile {
+      flex-direction: column;
+      align-items: flex-start;
+
+      gap: 24px;
+    }
+
+    > div {
+      @include tablet {
+        display: flex;
+
+        flex-direction: column;
+        gap: 24px;
+
+        strong {
+          margin: 0;
+
+          justify-content: flex-start;
+        }
+      }
+
+      @include mobile {
+        display: none !important;
+      }
+    }
+
+    &__author {
+      color: $color-primary-orange;
+      font-size: 1.125rem;
+      font-weight: 700;
+
+      @include center;
+      gap: 8px;
+    }
+
+    &__categorys {
+      padding: 0;
+      margin: 0;
+
+      list-style: none;
+      display: flex;
+      gap: 8px;
+
+      li {
+        padding: 8px 16px;
+        border-radius: 100px;
+
+        color: $color-text-800;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5rem;
+        background: $color-gray-300;
+      }
+
+      @include mobile {
+        order: 3;
+      }
+    }
+
+    &__date {
+      font-size: 1.125rem;
+      font-weight: 400;
+      color: $color-gray-text;
+
+      @include center;
+      gap: 10px;
+
+      svg {
+        color: $color-black-0;
+
+        width: 20px;
+        height: 20px;
+      }
+
+      @include tablet {
+        align-items: center;
+        height: fit-content;
+      }
+    }
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  &__text-content {
+    margin: 104px 0px;
+    display: flex;
+    gap: 95px;
+
+    @include tablet {
+      flex-direction: column;
+      gap: 32px;
+
+      margin: 56px 0px;
+    }
+
+    section {
+      p {
+        margin-top: 0px;
+      }
+    }
+
+    &__title {
+      h2 {
+        margin: 24px 0px;
+      }
+
+      margin-bottom: 56px;
+    }
+
+    &__divider {
+      width: 86px;
+      height: 5px;
+
+      background: $color-primary-orange;
+    }
+
+    section {
+      p {
+        font-size: 1.125rem;
+        line-height: 1.5rem;
+      }
+    }
+
+    aside {
+      position: sticky;
+      top: $header-size-desktop;
+
+      width: 100%;
+      padding: 24px;
+      border-radius: 16px;
+      max-height: 698px;
+
+      background: $color-blue-text;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      @include tablet {
+        flex-direction: row;
+        gap: 128px;
+
+        h3,
+        > div {
+          max-width: 222px;
+        }
+
+        h3 {
+          font-size: 2.5rem;
+          line-height: 3rem;
+        }
+      }
+
+      @include mobile {
+        flex-direction: column;
+        gap: 64px;
+
+        h3 {
+          margin: 0;
+        }
+      }
+
+      > h3 {
+        display: flex;
+        color: $color-text-100;
+
+        text-transform: uppercase;
+        font-size: 1.125rem;
+        line-height: 1.75rem;
+        font-weight: 700;
+      }
+
+      p {
+        margin: 0;
+        color: $color-text-100;
+        font-size: 1rem;
+        line-height: 1.5rem;
+
+        h3 {
+          color: $color-primary-orange;
+          margin-top: 0px;
+          margin-bottom: 16px;
+        }
+
+        @include tablet {
+          max-width: 234px;
+
+          display: flex;
+          flex-direction: column;
+          gap: 64px;
+        }
+
+        @include mobile {
+          height: auto;
+        }
+      }
+    }
+  }
+
+  &__share-post {
+    display: flex;
+    gap: 18px;
+
+    svg {
+      color: $color-text-100;
+    }
+  }
+
+  &__stars {
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+
+    strong {
+      text-transform: uppercase;
+
+      color: $color-gray-text;
+      font-weight: 700;
+    }
+
+    label {
+      margin-right: 8px;
+    }
+
+    margin-bottom: 104px;
+
+    @include mobile {
+      margin-bottom: 80px;
+    }
+  }
+}

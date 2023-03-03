@@ -1,0 +1,242 @@
+.costs-section {
+  &__banner {
+    background-position-y: center !important;
+
+    display: flex;
+  }
+
+  &__cards-section {
+    background: $color-primary-orange;
+    height: 628px;
+
+    display: flex;
+    align-items: center;
+
+    * {
+      min-height: 0;
+      min-width: 0;
+    }
+
+    strong {
+      color: $color-white-100;
+      font-weight: 400;
+
+      font-size: 1.125rem;
+
+      @include tablet {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  &__card {
+    width: calc(100% - 30px) !important;
+
+    @include mobile {
+      width: 100% !important;
+    }
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    box-shadow: 0px 4px 6px rgba(33, 37, 41, 0.2),
+      0px 0px 1px rgba(33, 37, 41, 0.32);
+
+    padding: 40px 32px;
+
+    background: $color-white-0;
+
+    height: 264px;
+
+    @media screen and (max-width: 900px) {
+      height: 330px;
+    }
+
+    @media screen and (max-width: 585px) {
+      align-self: center;
+    }
+
+    header {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      gap: 24px;
+
+      margin-bottom: 32px;
+
+      strong {
+        font-size: 1.75rem;
+        font-weight: 700;
+        color: $color-primary-orange;
+        width: 70%;
+
+        @include tablet {
+          font-size: 1.25rem;
+          width: 100%;
+        }
+
+        > div {
+          margin-top: 8px;
+
+          width: 100%;
+          height: 4px;
+          opacity: 0.2;
+
+          background: $color-primary-orange;
+        }
+      }
+    }
+
+    p {
+      margin: 0;
+      font-size: 1.125rem;
+      font-weight: 400;
+      color: $color-text-800;
+
+      @include tablet {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  &__taxas {
+    @include container;
+
+    h2 {
+      margin: 104px 0px;
+
+      > div {
+        width: 86px;
+        height: 5px;
+        background: $color-primary-orange;
+
+        margin-top: 24px;
+      }
+
+      @include tablet {
+        font-size: 2rem;
+      }
+    }
+  }
+
+  &__taxas-info {
+    display: flex;
+    justify-content: space-between;
+
+    flex-direction: row;
+
+    margin: 228px 0px;
+
+    @media screen and (max-width: 1000px) {
+      margin: 64px 0;
+      flex-direction: column;
+      gap: 72px;
+    }
+
+    p {
+      margin: 0;
+      line-height: 1.75rem;
+    }
+
+    > div:first-child {
+      display: flex;
+      align-items: center;
+
+      b {
+        align-self: flex-end;
+        color: $color-gray-text;
+        font-weight: 700;
+      }
+
+      strong {
+        height: fit-content;
+        font-size: 6rem;
+        margin: 0;
+
+        @include mobile {
+          font-size: 3.75rem;
+          padding: 10px 0px;
+        }
+
+        color: $color-text-800;
+      }
+
+      span {
+        align-self: flex-start;
+        text-transform: uppercase;
+        color: $color-gray-text;
+        font-weight: 700;
+      }
+    }
+
+    &__description {
+      display: flex;
+      gap: 24px;
+
+      @media screen and (max-width: 1000px) {
+        flex-direction: row;
+        gap: 24px;
+      }
+
+      @include tablet() {
+        flex-direction: column;
+        gap: 0;
+      }
+
+      @include mobile {
+        gap: 0px;
+      }
+    }
+  }
+
+  &__additional-costs-box {
+    ul {
+      padding: 0px 16px;
+
+      li {
+        list-style: none;
+
+        li {
+          list-style: disc;
+        }
+
+        h3 {
+          color: $color-text-800;
+          font-weight: 500;
+          font-size: 1.75rem;
+        }
+
+        p {
+          font-size: 1.125rem;
+        }
+
+        strong {
+          font-weight: 700;
+        }
+
+        a {
+          color: $color-primary-orange;
+          text-decoration: underline;
+        }
+      }
+    }
+
+    &__inner-container {
+      padding-bottom: 24px;
+
+      &:not(:first-child) {
+        padding-top: 24px;
+        border-top: 1px solid $color-gray-6;
+        border-bottom: 1px solid $color-gray-6;
+      }
+    }
+  }
+
+  &__documents {
+    ul {
+      margin: 32px 0px;
+      padding: 0;
+    }
+  }
+}

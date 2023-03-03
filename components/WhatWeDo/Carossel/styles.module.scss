@@ -1,0 +1,23 @@
+.card-carossel {
+  width: 1110px;
+
+  position: absolute;
+  top: 200px;
+
+  button:before {
+    color: $color-primary-orange;
+    font-size: 25px;
+  }
+
+  @include mobile {
+    position: absolute;
+    left: -36px;
+    width: 490px;
+
+    button {
+      top: 375px;
+    }
+  }
+}
+
+

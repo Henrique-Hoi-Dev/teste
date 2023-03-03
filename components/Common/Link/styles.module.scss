@@ -1,0 +1,31 @@
+.link {
+  cursor: pointer;
+  scroll-behavior: smooth;
+
+  font-weight: 400;
+  font-size: 1.1rem;
+  line-height: 1.75rem;
+
+  color: $color-secondary-gray-1;
+
+  transition: ease-in-out 400ms;
+
+  &:hover {
+    color: $color-primary-orange;
+  }
+
+  &__contained,
+  &__outlined {
+    @include button;
+  }
+
+  &__contained {
+    @include button--primary;
+    min-width: 160px;
+    text-align: center;
+  }
+
+  &__outlined {
+    @include button--secondary;
+  }
+}

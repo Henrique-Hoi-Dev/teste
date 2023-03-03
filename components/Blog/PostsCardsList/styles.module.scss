@@ -1,0 +1,102 @@
+.posts-card-list__container {
+  background: $color-gray-300;
+  padding: 122px 0px;
+
+  h2 {
+    margin: 0px 0px 24px 0px;
+  }
+
+  @include tablet {
+    padding: 64px 0px 104px 0px;
+
+    h2 {
+      font-size: 2rem;
+      line-height: 2.5rem;
+      margin-bottom: 16px;
+    }
+  }
+
+  @include mobile {
+    padding: 48px 0px;
+
+    h2 {
+      margin-top: 0;
+      margin-bottom: 8px;
+    }
+  }
+}
+
+.posts-card-list {
+  display: flex;
+  gap: 30px;
+  margin-top: 48px;
+
+  margin-left: calc((100% - 1100px) / 2);
+  margin-right: 0px;
+
+  padding: 10px;
+
+  @media (max-width: $desktop-container) {
+    margin-left: 24px;
+  }
+
+  @include mobile {
+    gap: 16px;
+  }
+
+  &__card {
+    cursor: pointer;
+
+    max-width: 445px;
+    min-width: 445px;
+
+    padding: 48px;
+    background: $color-white-0;
+    box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
+    border-radius: 16px;
+    list-style: none;
+
+    img {
+      border-radius: 16px;
+      width: 100%;
+
+      min-height: 167px;
+      max-height: 200px;
+    }
+
+    > strong {
+      font-weight: 700;
+      font-size: 2rem;
+      line-height: 3rem;
+
+      @include line-truncate(2);
+
+      margin: 24px 0px;
+
+      font-family: "Inter";
+
+      span {
+        font-family: "Spoqa Han Sans Neo", "Inter";
+      }
+    }
+
+    @include tablet {
+      width: calc(50% - 32px);
+    }
+
+    @include mobile {
+      min-width: calc(100% - 32px);
+      max-width: calc(100% - 32px);
+
+      padding: 24px;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+
+    align-items: flex-start;
+    gap: 16px;
+  }
+}

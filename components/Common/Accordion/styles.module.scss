@@ -1,0 +1,57 @@
+.accordion-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: $color-white-0;
+  padding: 2rem 0;
+  border-radius: 1rem;
+  width: 100%;
+
+  h3 {
+    font-size: 1.125rem;
+    line-height: 1.125rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    padding: 0 0.5rem;
+  }
+
+  p {
+    font-size: 1rem;
+    padding: 0 4rem;
+    white-space: pre-wrap;
+    width: 100%;
+  }
+
+  @include tablet() {
+    p {
+      padding: 0 1.5rem;
+    }
+  }
+
+  @include mobile() {
+    h3 {
+      font-size: 1rem;
+    }
+  }
+}
+
+.accordion-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+
+  p {
+    font-size: 1.125rem;
+    font-weight: 400;
+  }
+
+  svg {
+    margin-left: 0.5rem;
+    stroke: $color-white-0;
+  }
+}

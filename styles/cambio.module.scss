@@ -1,0 +1,122 @@
+.delivery-info-container {
+  @include container;
+
+  margin-top: 1.5rem;
+
+  @include tablet {
+    margin: -20px 24px;
+  }
+
+  p {
+    font-weight: 400;
+    font-size: 0.8rem;
+    color: $color-white-100;
+
+    @include mobile  {
+      font-size: 0.7rem;
+    }
+  }
+}
+
+.exchange-container {
+  &__cards {
+    @include container;
+
+    display: flex;
+    flex: 1;
+    height: 100%;
+    gap: 2.25rem;
+    margin-top: 3.5rem;
+
+    flex-direction: row;
+    align-items: space-between;
+    justify-content: space-around;
+
+    @include mobile {
+      flex-direction: column;
+      margin: 45px 24px;
+    }
+
+    @include tablet {
+      flex-direction: column;
+      margin: 45px 24px;
+    }
+  }
+
+  &__inner-card {
+    flex: 1;
+  }
+
+  &__advantagens-carousel-section {
+    padding: 32px 0 100px;
+    background: $color-blue-text;
+
+    @include tablet {
+      padding: 1px 0px 105px;
+    }
+  }
+
+  &__advatanges-carousel__item {
+    display: grid !important;
+
+    gap: 30px;
+    grid-template-columns: 2fr 1fr;
+
+    @include tablet {
+      grid-template-columns: none;
+    }
+
+    h3 {
+      color: $color-text-800;
+      font-size: 2.5rem;
+      line-height: inherit;
+      margin: 0;
+
+      @include tablet {
+        font-size: 1.5rem;
+      }
+
+      text-transform: none;
+
+      strong {
+        color: $color-primary-orange;
+        font-size: inherit;
+        text-transform: none;
+      }
+    }
+
+    p {
+      font-size: 1rem;
+      width: 624px;
+
+      @include mobile {
+        width: 278px;
+      }
+
+      strong {
+        font-weight: 800;
+      }
+    }
+
+    a {
+      color: $color-primary-orange;
+      text-decoration: underline;
+    }
+
+    &-img {
+      margin: auto 0;
+
+      @include tablet {
+        display: none;
+      }
+    }
+  }
+}
+
+.banner {
+  @include mobile {
+    p {
+      max-width: 272px!important;
+    }
+  }
+}

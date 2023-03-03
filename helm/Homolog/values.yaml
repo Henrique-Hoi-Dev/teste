@@ -1,0 +1,27 @@
+valuesPath: Development
+env:
+  - name: COMPlus_EnableDiagnostics
+    value: "0" 
+  - name: ASPNETCORE_ENVIRONMENT
+    value: "Development"
+  - name: ASPNETCORE_URLS
+    value: "http://+:5000"
+    
+hpa:
+  enabled: false
+
+resources:
+  limits:
+    cpu: 600m
+    memory: 1Gi
+  requests:
+    cpu: 300m
+    memory: 512Mi
+
+ResourceQuota:
+  limits:
+    cpu: 1
+    memory: 2Gi
+
+livenessProbe: false
+readinessProbe: false

@@ -1,0 +1,140 @@
+.language-picker-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.language-picker {
+  cursor: pointer;
+  position: relative;
+
+  width: 80px;
+  height: 40px;
+
+  padding: 8px 15px;
+
+  border-radius: 100px;
+  border: 1px solid black;
+
+  display: flex;
+  gap: 8px;
+  align-items: center;
+
+  picture {
+    @include center;
+
+    img {
+      width: 30px;
+      height: auto;
+    }
+  }
+
+  svg {
+    transition: transform ease-in-out 0.3s;
+
+    &[aria-pressed="true"] {
+      transform: rotate(180deg);
+    }
+  }
+
+  &__options {
+    width: 80px;
+    position: absolute;
+    top: 25px;
+    left: 0;
+    padding: 0;
+
+    -webkit-box-shadow: 3px 2px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 3px 2px 5px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 3px 2px 5px 0px rgba(0, 0, 0, 0.75);
+
+    li {
+      background-color: $color-white-0;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      padding: 5px;
+
+      list-style: none;
+
+      position: relative;
+    }
+
+    img {
+      max-width: 30px;
+    }
+  }
+
+  &__options--mobile {
+    padding: 0px;
+    margin: 0;
+    list-style: none;
+
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    img {
+      width: 30px;
+      height: auto;
+    }
+
+    li {
+      label {
+        display: block;
+        position: relative;
+        padding-left: 35px;
+        margin-bottom: 12px;
+        cursor: pointer;
+        font-size: 22px;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+
+        input {
+          position: absolute;
+          opacity: 0;
+          cursor: pointer;
+
+          &:checked ~ span {
+            background-color: $color-primary-orange;
+          }
+
+          &:checked ~ span::after {
+            display: block;
+          }
+        }
+
+        &:hover input ~ span {
+          background-color: $color-primary-orange;
+        }
+
+        span {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 25px;
+          width: 25px;
+          background-color: white;
+          border-radius: 50%;
+
+          &::after {
+            content: "";
+            position: absolute;
+            display: none;
+
+            top: 9px;
+            left: 9px;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: white;
+          }
+        }
+      }
+    }
+  }
+}

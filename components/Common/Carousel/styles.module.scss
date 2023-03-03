@@ -1,0 +1,176 @@
+.carousel-container {
+  background-color: $color-white-0;
+  padding: 2rem 4rem 8rem 4rem;
+  margin-top: 3rem;
+  border-radius: 1rem;
+
+  h3 {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: $color-gray-text;
+    text-transform: uppercase;
+
+    @include mobile {
+      margin-left: 10px;
+      font-size: 1rem;
+    }
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  @include tablet() {
+    padding: 1rem 2rem 9rem 2rem;
+  }
+
+  @include mobile {
+    padding: 1rem 15px 6rem 15px;
+  }
+}
+
+.carousel-item__container {
+  display: flex;
+  gap: 3rem;
+  min-height: 25rem;
+  height: 100%;
+
+  p,
+  span {
+    font-size: 1rem;
+    font-weight: 400;
+    color: $color-gray-text;
+    margin-top: 20px;
+  }
+
+  section:first-child {
+    flex: 2;
+
+    h4 {
+      font-size: 2rem;
+      font-weight: 700;
+      color: $color-orange-800;
+      margin: 70px 0 0;
+
+      @include mobile {
+        margin: 0;
+      }
+    }
+
+    @include mobile {
+      margin-left: 10px;
+    }
+  }
+
+  section:nth-child(2) {
+    flex: 4;
+    margin: auto;
+    padding: 2rem 1rem 0rem 2rem;
+    max-width: 550px;
+    margin-right: 35px;
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    p {
+      font-size: 1.125rem;
+      font-weight: 700;
+      color: $color-text-800;
+      margin: 0;
+      flex: 1;
+    }
+
+    @include corner-border(":before", top, left);
+    @include corner-border(":after", bottom, right);
+  }
+
+  @include tablet() {
+    flex-direction: column;
+
+    section:first-child h4 {
+      margin: 30px 0 0;
+
+      font-size: 2rem;
+      width: 489px;
+    }
+
+    section:nth-child(2) {
+      padding: 2rem 0.5rem 0.5rem 2rem;
+      margin: initial;
+      max-width: 645px;
+
+      p {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  @include mobile {
+    section:first-child h4 {
+      margin: 0;
+      font-size: 1rem;
+      width: 254px;
+    }
+
+    span {
+      margin: 0;
+    }
+    section:nth-child(2) {
+      padding: 1rem 0.5rem 0.5rem 1rem;
+
+      width: 310px;
+    }
+  }
+}
+
+.carousel-dot__container {
+  display: flex;
+  padding-top: 6.25rem;
+  height: 5rem;
+  width: 100%;
+}
+
+.carousel-dots__founder-page-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 2rem;
+
+  @include mobile {
+    justify-content: center;
+    right: 25px;
+  }
+}
+
+.carousel-dot {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  span {
+    background-color: $color-orange-800;
+    cursor: pointer;
+    color: $color-white-0;
+    opacity: 0.35;
+
+    width: 40px;
+    height: 40px;
+
+    border-radius: 2rem;
+    padding: 8px 16px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.1s ease-in-out;
+  }
+}
+
+.carousel-dot__active {
+  span {
+    opacity: 1;
+  }
+}

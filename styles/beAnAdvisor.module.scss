@@ -1,0 +1,62 @@
+.beAnAdvisor-section {
+  margin: 0px;
+  margin-bottom: -56px;
+
+  @include mobile {
+    margin-bottom: -49px;
+  }
+
+  h1 {
+    margin: 0;
+  }
+
+  &__product-itens {
+    padding: 60px 0 1px 0px;
+
+    background: $color-blue-text;
+
+    @include mobile {
+      grid-template-columns: 1fr;
+      gap: 16px;
+      padding: 10px 0;
+    }
+
+    a {
+      width: auto;
+    }
+  }
+
+  &__cards {
+    margin-top: 20px;
+  }
+
+  &__cards-carousel {
+    @include tablet {
+      padding: 0;
+    }
+
+    &__card {
+      padding: 5px !important;
+    }
+  }
+}
+
+.banner {
+  &__content {
+    @include container();
+  }
+
+  @include mobile {
+    p {
+      width: 300px !important;
+      font-size: 1rem !important;
+      line-height: 1.5rem !important;
+    }
+  }
+
+  p {
+    width: 635px;
+    font-size: 1.8rem;
+    line-height: 3rem;
+  }
+}

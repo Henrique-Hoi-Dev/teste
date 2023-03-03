@@ -1,0 +1,26 @@
+.heading {
+  text-align: center;
+  color: $color-secondary-gray-5;
+}
+
+.content {
+  overflow-y: scroll;
+  height: 2500px;
+}
+
+.button {
+  position: fixed;
+  width: 3rem;
+  height: 3rem;
+  right: 5%;
+  bottom: 4rem;
+  padding-left: 0.75rem;
+  padding-top: 0.75rem;
+  font-size: 1.5rem;
+  padding: auto;
+  z-index: 1;
+  cursor: pointer;
+  color: $color-text-800;
+  border-radius: 50%;
+  background-color: $color-secondary-gray-5;
+}

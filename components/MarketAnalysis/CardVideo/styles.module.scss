@@ -1,0 +1,102 @@
+.video-card {
+  &__container {
+    display: flex;
+
+    @include mobile {
+      flex-direction: column;
+    }
+  }
+
+  &__video-container {
+    margin: 20px 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0 0 0;
+    gap: 16px;
+
+    width: 445px;
+    height: 525px;
+
+    background: $color-white-0;
+
+    border-radius: 16px;
+    box-shadow: 0px 16px 40px -24px rgba(0, 0, 0, 0.7);
+
+    @include tablet {
+      padding: 30px 0 0 40px;
+    }
+
+    @include mobile {
+      align-items: center;
+      padding: 24px;
+      gap: 246px;
+
+      width: 325px;
+      height: 420px;
+
+      a {
+        margin: 20px;
+      }
+    }
+  }
+
+  &__video {
+    max-width: 355px;
+
+    img {
+      width: 349px;
+      height: auto;
+
+      cursor: pointer;
+    }
+
+    @include tablet {
+      max-width: 320px;
+
+      img {
+        width: 270px;
+      }
+    }
+
+    @include mobile {
+      margin-right: 0px;
+
+      img {
+        width: 277.99px;
+        margin: 8px 0 0 16px;
+      }
+    }
+  }
+
+  &__title {
+    font-size: 2rem;
+    margin-bottom: -12px;
+
+    @include mobile {
+      font-size: 1.5rem !important;
+      margin: 20px;
+    }
+  }
+
+  &__sub-title {
+    font-size: 1.1rem;
+    height: 10px;
+
+    @include mobile {
+      font-size: 1rem;
+      margin: 20px;
+    }
+  }
+
+  &__description {
+    font-size: 1rem;
+    width: 600px;
+
+    @include mobile {
+      width: 265px;
+      margin: 21px;
+    }
+  }
+}

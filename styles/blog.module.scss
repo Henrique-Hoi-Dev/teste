@@ -1,0 +1,49 @@
+.blog-container {
+  &__posts-categorys {
+    background: $color-blue-text;
+    padding: 80px 0px 104px 0px;
+
+    @include tablet {
+      padding: 64px 0px 88px 0px;
+    }
+
+    @include mobile {
+      padding: 48px 0px;
+    }
+
+    > div {
+      @include container;
+
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 30px;
+
+      @include tablet {
+        grid-template-columns: repeat(3, 400px);
+      }
+    }
+
+    &__title {
+      color: $color-text-100;
+      font-size: 1.125rem;
+      line-height: 1.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+
+      max-width: 139px;
+    }
+
+    &__carousel-arrows {
+      align-items: center;
+      justify-content: space-around;
+
+      button:not(:disabled) {
+        background: $color-primary-orange;
+
+        svg {
+          color: $color-white-0;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+---
+name: '1.0.0-rc.3782'
+
+trigger:
+  branches:
+    include: ["develop", "staging"]
+
+pool:
+ name: Mirae
+
+resources:
+  repositories:
+    - repository: templates
+      type: git
+      name: "Portal Publico/devops-templates"
+      ref: refs/heads/portal-publico
+
+stages:
+- template: build/docker.yaml@templates
+  parameters:
+    image: 'portal-publico'

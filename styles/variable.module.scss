@@ -1,0 +1,205 @@
+.button-container {
+  cursor: pointer;
+  width: 531px;
+  height: 40px;
+  font-weight: 400;
+  font-size: 1.125rem;
+
+  padding: 8px 16px;
+  gap: 8px;
+  margin-top: 59px;
+
+  border: none;
+
+  color: $color-white-100;
+
+  background-color: $color-white-0;
+  color: $color-text-800;
+}
+
+.highlighted-button {
+  border-bottom: 1px solid $color-primary-orange;
+}
+
+.variable-section {
+  margin: 0px;
+  margin-bottom: -56px;
+
+  @include mobile {
+    margin-bottom: -49px;
+  }
+
+  h1 {
+    margin: 0;
+  }
+
+  &__banner {
+    background-size: cover;
+    height: 900px;
+
+    margin-bottom: 56px;
+
+    @include mobile {
+      background-size: 100%;
+      background-repeat: no-repeat;
+
+      height: auto;
+      margin-bottom: 24px;
+    }
+
+    &__content {
+      @include container;
+      height: 100%;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: flex-start;
+
+      padding-bottom: 140px;
+
+      @include mobile {
+        margin: 0px 24px;
+        padding-top: 45px;
+        padding-bottom: 51px;
+      }
+
+      * {
+        color: $color-text-100;
+      }
+
+      p {
+        font-size: 1.75rem;
+        line-height: 2.5rem;
+        font-weight: 400;
+
+        max-width: 635px;
+        height: auto;
+
+        @include mobile {
+          font-size: 1rem;
+          line-height: 1.5rem;
+
+          max-width: 253px;
+        }
+      }
+
+      a {
+        width: fit-content;
+      }
+    }
+  }
+
+  &__cards-section {
+    padding: 10px;
+
+    background: $color-white-0;
+
+    @include mobile {
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+
+    a {
+      width: auto;
+    }
+  }
+
+  &__card-content {
+    background: $color-white-0;
+    padding: 65px;
+
+    @media screen and (max-width: 614px) {
+      padding: 46px 10px 0px;
+    }
+
+    &__cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 25px;
+      gap: 25px;
+
+      @media screen and (max-width: 1220px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+      }
+    }
+  }
+
+  &__text-content {
+    @include mobile {
+      h1 {
+        font-size: 1.5rem !important;
+        line-height: 1.875rem !important;
+      }
+
+      p {
+        font-size: 1rem !important;
+      }
+    }
+
+    &__card-container {
+      list-style-type: none;
+
+      margin-top: 80px;
+    }
+
+    h1 {
+      margin: 0;
+      padding-bottom: 1.5rem;
+      font-size: 3rem;
+      font-weight: 700;
+      line-height: 4rem;
+      position: relative;
+
+      &:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -6px;
+        width: 8%;
+        height: 4px;
+        background-color: $color-orange-800;
+        border-radius: 1rem;
+      }
+    }
+
+    p {
+      font-size: 1.125rem;
+      font-weight: 400;
+      line-height: 1.75rem;
+      color: $color-gray-text;
+      margin-top: 2.9rem;
+    }
+
+    &__description2 {
+      margin-top: 1rem !important;
+    }
+
+    &__cards {
+      margin-top: 20px;
+    }
+  }
+
+  &__card-video {
+    margin-top: 20px;
+    background: #063b72;
+
+    padding: 60px 0 50px 0px;
+  }
+}
+
+.button-section {
+  display: flex;
+
+  @include mobile {
+    flex-direction: row;
+
+    button {
+      width: 342px;
+      height: 40px;
+    }
+  }
+}

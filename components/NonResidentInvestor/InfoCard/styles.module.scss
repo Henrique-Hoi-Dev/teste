@@ -1,0 +1,99 @@
+.info-card {
+  display: grid;
+  grid-template-columns: 50px 533px 95px;
+  grid-template-rows: 35px 90px;
+  grid-template-areas:
+    "title title title"
+    "number number nameValue";
+
+  @include mobile {
+    grid-template-columns: 50px 215px 47px;
+  }
+
+  &__title {
+    grid-area: title;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    h5 {
+      width: 100%;
+      text-align: center;
+      color: $color-white-0;
+      font-size: 1.125rem;
+      margin-right: 52px;
+      font-weight: 500;
+    }
+
+    @include tablet {
+    }
+
+    @include mobile {
+      justify-content: flex-end;
+      width: 335px;
+
+      h5 {
+        width: 315px;
+        height: 48px;
+        font-size: 1rem;
+        text-align: center;
+        margin: 0px 0px -32px;
+        font-weight: 300;
+      }
+    }
+  }
+
+  &__number {
+    grid-area: number;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    h1 {
+      color: $color-text-100;
+    }
+
+    h5 {
+      margin-top: 75px;
+      color: $color-white-0;
+      font-size: 1.313rem;
+    }
+
+    @include tablet {
+      h1 {
+        font-size: 3.75rem;
+      }
+    }
+
+    @include mobile {
+      h1 {
+        font-size: 1.5rem;
+        font-weight: 500;
+      }
+
+      h5 {
+        font-size: 1rem;
+        margin: 3px;
+      }
+    }
+  }
+
+  &__name-value {
+    grid-area: nameValue;
+    display: flex;
+
+    h5 {
+      color: $color-white-0;
+      font-size: 1rem;
+      margin-top: 12px;
+    }
+
+    @include mobile {
+      h5 {
+        align-items: center;
+        margin-top: 35px;
+        font-weight: 500;
+      }
+    }
+  }
+}

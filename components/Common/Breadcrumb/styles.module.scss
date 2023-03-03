@@ -1,0 +1,51 @@
+.breadcrumb {
+  margin: 56px 0px;
+  width: 100vw;
+  max-width: 100%;
+
+  @include tablet {
+    margin: 48px 0px;
+  }
+
+  a {
+    color: $color-blue-text;
+    font-size: 1.125rem;
+    font-weight: 400;
+
+    svg {
+      display: none;
+      color: $color-primary-orange;
+    }
+
+    @include mobile {
+      color: $color-text-800;
+
+      display: flex;
+      align-items: center;
+      gap: 8px;
+
+      svg {
+        display: inherit;
+      }
+    }
+  }
+
+  span {
+    margin: 0px 8px;
+    color: $color-black-0;
+
+    @include mobile {
+      display: none;
+    }
+  }
+
+  strong {
+    font-size: 1.125rem;
+    font-weight: 400;
+    color: $color-text-800;
+
+    @include mobile {
+      display: none;
+    }
+  }
+}

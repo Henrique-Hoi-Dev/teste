@@ -1,0 +1,263 @@
+.rlp-section {  
+  &__table-contant {
+    background: $color-blue-text;
+    padding: 70px;
+
+    @include mobile {
+      text-align: left;
+    }
+
+    @include tablet {
+      padding: 1px 0 110px;
+    }
+
+    &__text {
+      @include container();
+
+      * {
+        color: $color-white-100;
+      }
+
+      h1 {
+        font-weight: 700;
+        font-size: 3rem;
+        line-height: 4rem;
+
+        position: relative;
+
+        &:after {
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: -25px;
+          width: 7.5%;
+          height: 4px;
+          background-color: $color-primary-orange;
+          border-radius: 1rem;
+        }
+      }
+      ul {
+        margin-left: -20px!important;
+      }
+      p, ul {
+        margin: 70px 0 60px;
+
+        font-weight: 400;
+        font-size: 1.1rem;
+        line-height: 1.8rem;
+      }
+
+      @include tablet {
+        h1 {
+          font-size: 2rem;
+
+          &:after {
+            bottom: -10px;
+            width: 12.5%;
+          }
+        }
+      }
+
+      @include mobile {
+        p {
+          margin: 30px 0 60px;          
+        }
+      }
+    }
+
+    &__table {
+      @include container();
+
+      background: $color-white-0;
+
+      box-shadow: 0px 4px 6px rgba(33, 37, 41, 0.2), 0px 0px 1px rgba(33, 37, 41, 0.32);
+      border-radius: 16px;
+
+      width: 1110px;
+      height: 560px;
+
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 24px 32px;
+      gap: 32px;
+
+      h4 {
+        color: $color-gray-text;
+        font-size: 1.1rem;
+        font-weight: 700;
+      }
+
+      h5 {
+        font-size: 1.1rem;
+        font-weight: 500;
+        color: $color-black-0;
+      }
+
+      h4, h5 {
+        margin: 0
+      }
+
+      &__table1, &__table2 {
+        width: 1046px;
+        border-spacing: inherit;
+        display: table;
+
+        @include mobile {
+          display: none;
+        }
+
+        @include tablet {
+          width: 656px;
+        }
+      }
+
+      thead {
+        border-radius: 6px;
+      }
+
+     thead, th {
+        background: $color-gray-300;
+        padding: 16px;
+      }
+
+      tbody, td {
+        padding: 16px;
+        border-bottom: 1px solid $color-white-200;
+      }
+
+      @include mobile {
+        width: 342px;
+        height: 954px;
+      }
+
+      @include tablet {
+        width: auto;
+      }
+    }
+
+    &__sub-description {
+      @include container();
+
+      p {
+        font-size: 0.75rem;
+      }
+
+      color: $color-white-100;
+
+      font-weight: 400;
+      line-height: 24px;
+
+      a {
+        text-decoration: underline;
+
+        cursor: pointer;
+
+        background: transparent;
+        border: 0;
+        color: $color-orange-800;
+
+        margin: 0;
+      }
+    }
+
+    &__table-mobile {
+      @include mobile {
+        display: block!important;
+      }
+      margin-top: 100px;
+
+      table {
+        width: 279px;
+        margin-top: 10px;
+      }
+
+      @include desktop {
+        display: none;
+      }
+
+      @include tablet {
+        display: none;
+      }
+    }
+
+    @include mobile {
+      padding: 10px 0px 85px;
+
+      h1 {
+        font-size: 1.5rem;
+
+        &:after {
+          bottom: 2px;
+          width: 12%;
+        }
+      }
+    }
+  }
+
+  &__grid-contant {
+    @include mobile {
+      display: flex!important;
+    }
+
+    width: 294px;
+    flex-wrap: wrap;
+
+    hr {
+      width: 294px;
+      height: 1px;
+
+      border-bottom: 1px solid #F6F6F6;
+      width: 160px;
+      margin-left: -11px;
+      margin-top: -10px;
+      height: 1px;
+      opacity: 0.2;
+    }
+
+    &__grid {
+      width: 147px;
+      height: 76px;
+
+      h4 {
+        font-size: 0.8rem;
+      }
+
+      h5 {
+        font-size: 1rem;
+      }
+
+      h4, h5 {
+        padding: 10px;
+        font-weight: 400;
+      }
+    }
+    
+    &__grid2 {
+      margin-top: 115px;
+
+      width: 147px;
+      height: 76px;
+
+      h4 {
+        font-size: 0.8rem;
+      }
+
+      h5 {
+        font-size: 1rem;
+      }
+
+      h4, h5 {
+        padding: 10px;
+      }
+    }
+
+    @include desktop {
+      display: none;
+    }
+
+    @include tablet {
+      display: none;
+    }
+  }
+}

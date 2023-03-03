@@ -1,0 +1,599 @@
+.home-container {
+  overflow: hidden;
+}
+
+.home {
+  &__top-container-content {
+    @media (max-width: 684px) {
+      h2 {
+        p {
+          font-size: 2rem !important;
+          line-height: 2.5rem !important;
+        }
+      }
+    }
+
+    p {
+      font-size: 1.75rem;
+      line-height: 2.5rem;
+    }
+
+    @include tablet {
+      margin-top: 96px;
+    }
+  }
+
+  &__banner {
+    @include tablet {
+      min-height: 400px !important;
+    }
+
+    height: 900px;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-position-x: center !important;
+
+    max-height: min(768px, 100vh);
+
+    display: flex;
+    align-items: flex-end;
+
+    padding-bottom: 112px;
+
+    @include tablet {
+      align-items: center;
+    }
+
+    @include mobile {
+      height: 768px;
+    }
+
+    > div {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 32px;
+
+      @include tablet {
+        max-width: 516px;
+      }
+
+      @include mobile {
+        max-width: 258px;
+      }
+
+      * {
+        margin: 0;
+      }
+
+      h2 {
+        color: $color-white-0;
+        max-width: 800px;
+
+        strong {
+          color: $color-primary-orange;
+          font-size: inherit;
+        }
+
+        p {
+          font-size: inherit;
+          line-height: inherit;
+          font-weight: inherit;
+          min-width: 905px;
+        }
+
+        @include tablet {
+          p {
+            min-width: 637px;
+          }
+        }
+
+        @include mobile {
+          font-size: 2rem;
+          line-height: 2.5rem;
+
+          p {
+            min-width: 268px;
+          }
+        }
+      }
+
+      a {
+        width: auto;
+        font-size: 1rem;
+      }
+
+      p {
+        color: $color-white-0;
+        max-width: 595px;
+
+        @include tablet {
+          font-size: 1.1rem;
+          line-height: 1.75rem;
+          max-width: 425px;
+        }
+
+        @include mobile {
+          font-size: 1rem;
+          line-height: 1.75rem;
+        }
+      }
+    }
+  }
+
+  &__banner__market-analysis {
+    justify-content: flex-start;
+    height: 900px;
+
+    min-height: 492px !important;
+
+    @include tablet {
+      min-height: 596px !important;
+    }
+
+    @include mobile {
+      min-height: 292px !important;
+      max-height: 292px !important;
+    }
+
+    > div {
+      height: 100%;
+      display: flex;
+      align-items: center;
+    }
+
+    @include mobile {
+      height: auto;
+    }
+
+    @include mobile {
+      padding: 24px 0px;
+    }
+
+    .home__banner__content {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+      align-items: flex-start;
+
+      background: rgba(4, 59, 114, 0.45);
+      border-radius: 16px 0px;
+      width: 479px;
+
+      max-height: calc(100% - 40px);
+      padding: 105px 48px;
+
+      @include tablet {
+        background-position: right;
+      }
+
+      h2 {
+        margin: 0;
+
+        p {
+          color: $color-primary-orange;
+          font-size: 3rem;
+          line-height: 4rem;
+          font-weight: 700;
+
+          @include tablet {
+            font-size: 2.5rem;
+            line-height: 3rem;
+          }
+
+          @include mobile {
+            font-size: 1.5rem;
+            line-height: 1.875rem;
+          }
+        }
+      }
+
+      p {
+        color: $color-white-0;
+        font-weight: 500;
+        margin: 0;
+        font-size: 1.5rem;
+        line-height: 2.188rem;
+      }
+
+      a {
+        width: auto;
+        font-size: 1rem;
+      }
+
+      @include tablet {
+        padding: 24px;
+
+        p {
+          font-size: 1.1rem;
+          line-height: 1.75rem;
+        }
+      }
+
+      @include mobile {
+        width: 100%;
+
+        gap: 24px;
+
+        p {
+          font-size: 1rem;
+          line-height: 1.5rem;
+        }
+      }
+    }
+  }
+
+  &__advantages {
+    margin-top: 40px;
+    padding: 70px 0px;
+
+    @include tablet {
+      padding: 70px 0px 120px;
+    }
+
+    @include mobile {
+      padding: 65px 0px 120px;
+    }
+
+    background: $color-primary-orange;
+
+    &__container {
+      mask-image: linear-gradient(90deg, #000 98%, transparent);
+    }
+  }
+
+  &__investments-simulator {
+    background: $color-primary-orange;
+    padding: 200px;
+
+    @include tablet {
+      padding: 99px;
+    }
+
+    @include mobile {
+      padding: 24px;
+      padding-bottom: 48px;
+      padding-top: 48px;
+    }
+
+    > div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 186px;
+
+      @include tablet {
+        flex-direction: column;
+        gap: 112px;
+
+        img {
+          max-width: 298px;
+
+          @include mobile {
+            max-width: 147px;
+          }
+        }
+      }
+
+      @include mobile {
+        gap: 72px;
+      }
+    }
+
+    &__texts {
+      display: flex;
+      flex-direction: column;
+      gap: 48px;
+
+      max-width: 399px;
+
+      @include tablet {
+        h2 {
+          font-size: 2.5rem;
+          line-height: 2.5rem;
+        }
+      }
+
+      @include mobile {
+        gap: 24px;
+        margin-right: auto;
+        align-items: flex-start;
+        text-align: left;
+      }
+
+      h2 {
+        width: 270px;
+
+        @include tablet {
+          width: 450px;
+        }
+
+        @include mobile {
+          width: 180px;
+          font-size: 2rem;
+        }
+      }
+
+      span {
+        font-size: 1.5rem;
+
+        @include tablet {
+          font-size: 1.1rem;
+          line-height: 1.75rem;
+        }
+
+        @include mobile {
+          font-size: 1rem;
+          line-height: 1.5rem;
+        }
+      }
+
+      h2,
+      span,
+      button {
+        margin: 0;
+        color: $color-white-0;
+      }
+
+      a {
+        background: none;
+        border: 1px solid $color-white-0;
+        width: 199px;
+      }
+    }
+  }
+}
+
+.price-taxes-full-container {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  height: 120%;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.price-taxes-container {
+  width: 120%;
+  flex-direction: column;
+}
+
+.price-taxes-outer-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  @include tablet {
+    justify-content: flex-start;
+  }
+
+  @include mobile {
+    justify-content: flex-start !important;
+  }
+}
+
+.price-taxes-bottom-container {
+  border-left: 2px solid $color-primary-orange;
+  width: 100%;
+}
+
+.price-taxes-bottom-inner-container {
+  margin-left: 0.75rem;
+}
+
+.footer-link-highlight {
+  text-decoration: underline;
+  font-size: 0.75rem;
+}
+
+.price-taxes-footer-description {
+  p {
+    font-size: 0.75rem;
+    width: 730px;
+  }
+
+  @include tablet {
+    p {
+      width: 559px;
+    }
+  }
+
+  @include mobile {
+    p {
+      width: 332px !important;
+      margin-bottom: 20px !important;
+    }
+  }
+}
+
+.price-taxes-highlight {
+  font-size: 12px;
+  text-decoration: underline;
+}
+
+.home-fees {
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  width: 100%;
+  max-width: 100%;
+
+  margin: 0 auto;
+  padding-bottom: 24px;
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 900px;
+
+  @include mobile {
+    background-position: center !important;
+  }
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  @include tablet() {
+    height: calc(100vh - 80px) !important;
+    max-height: calc(100vh - 80px) !important;
+  }
+
+  ul {
+    @include container;
+
+    display: flex;
+    align-self: center;
+    width: 100%;
+    gap: 24px;
+    padding-top: 8rem;
+    list-style: none;
+
+    @media screen and (max-width: 1200px) {
+      flex-wrap: wrap;
+    }
+
+    @include tablet() {
+      flex-wrap: wrap;
+      margin-right: auto;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 186px 0 0 71px;
+    }
+
+    @include mobile {
+      margin: 45px 8px !important;
+      padding: 65px 0 !important;
+
+      b {
+        line-height: 2.5rem !important;
+        font-size: 2rem !important;
+      }
+    }
+
+    li {
+      font-weight: 700;
+      min-width: 15rem;
+
+      padding-left: 13px;
+
+      @include mobile {
+        border-left: none;
+        padding-left: none;
+      }
+
+      h3 {
+        font-size: 1.125rem;
+        line-height: 1.75rem;
+        color: $color-white-100;
+
+        @include tablet() {
+          margin-right: auto;
+
+          margin-bottom: 20px;
+        }
+      }
+
+      div {
+        height: 4.125rem;
+        display: flex;
+      }
+
+      span {
+        color: $color-white-0;
+        font-size: 1.125rem;
+        line-height: 1.75rem;
+
+        margin-left: 0.75rem;
+
+        &:first-child {
+          align-self: flex-end;
+        }
+
+        @include mobile {
+          margin: 0 !important;
+        }
+
+        @include tablet() {
+          margin-bottom: -18px;
+
+          &:last-child {
+            margin-top: auto;
+          }
+        }
+      }
+
+      strong {
+        color: $color-white-0;
+
+        @include mobile {
+          margin: 16px 7px !important;
+          height: 26px !important;
+        }
+
+        @include tablet() {
+          font-size: 1.1rem;
+          margin: 30px 15px;
+        }
+      }
+
+      b {
+        font-size: 3.75rem;
+        line-height: 4.5rem;
+        color: $color-white-100;
+      }
+
+      @include tablet() {
+        h3,
+        div span {
+          font-size: 1.125rem;
+          line-height: 1.75rem;
+        }
+
+        min-width: inherit;
+
+        div {
+          align-items: flex-end;
+          height: 2.75rem;
+        }
+
+        b {
+          line-height: 2.5rem;
+        }
+      }
+    }
+  }
+
+  footer {
+    font-size: 0.75rem;
+    font-weight: 400;
+    line-height: 1.5rem;
+    color: $color-white-0;
+    white-space: pre-wrap;
+
+    @include container;
+
+    width: 1100px;
+    margin-bottom: 95px;
+
+    a {
+      color: $color-orange-800;
+    }
+
+    @include mobile {
+      margin: 0px 24px !important;
+    }
+
+    @include tablet() {
+      font-size: 0.75rem;
+      width: auto;
+      margin: 45px 105px;
+    }
+  }
+}

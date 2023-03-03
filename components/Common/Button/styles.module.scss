@@ -1,0 +1,45 @@
+.button {
+  height: 40px;
+
+  @include button;
+
+  &--primary {
+    @include button--primary;
+  }
+
+  &--secondary {
+    @include button--secondary;
+  }
+
+  &:disabled {
+    opacity: 0.35;
+    cursor: not-allowed;
+  }
+
+  &--disabled-home {
+    background-color: $color-secondary-gray-5;
+  }
+
+  &--terciary {
+    @include button--terciary;
+    height: auto;
+  }
+
+  &--be-an-advisor {
+    font-size: 1rem;
+    font-weight: 500;
+  }
+
+  &--icon {
+    display: flex;
+    align-items: center;
+
+    svg {
+      color: currentColor;
+
+      path {
+        stroke: currentColor;
+      }
+    }
+  }
+}

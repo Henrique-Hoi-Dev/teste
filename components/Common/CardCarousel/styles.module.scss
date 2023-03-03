@@ -1,0 +1,107 @@
+.card-carousel {
+  margin-top: 56px;
+
+  display: flex;
+  flex-direction: column;
+
+  &__title,
+  &__description {
+    font-size: 1.1rem;
+    color: $color-gray-text;
+  }
+
+  &__title {
+    margin: 0 0 -20px;
+
+    @include tablet {
+      margin: 0 10px -20px;
+    }
+  }
+
+  margin-bottom: 56px;
+
+  &__cards-slider {
+    margin-top: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    mask-image: linear-gradient(90deg, #000 98%, transparent);
+
+    @include tablet {
+      padding: 5px;
+      overflow-y: hidden;
+    }
+
+    @include mobile {
+      display: flex;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      gap: 16px;
+    }
+
+    &__arrow {
+      position: absolute;
+
+      background: $color-primary-orange;
+      height: 40px;
+      width: 40px;
+
+      border-radius: 50%;
+
+      color: $color-primary-orange;
+    }
+  }
+
+  &__card {
+    max-width: 548px;
+    flex: 1 0 calc(100% - 32px);
+
+    padding-right: 2rem;
+
+    @include mobile {
+      width: 300px;
+      margin-right: 0px;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+
+      cursor: pointer;
+    }
+  }
+}
+
+.custom-arrows {
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+
+  margin: 32px 20px 0 -21px;
+  gap: 40px;
+
+  button {
+    width: 40px;
+    height: 40px;
+
+    border-radius: 50%;
+
+    @include btn-reset;
+    @include center;
+
+    background: $color-primary-orange;
+    color: $color-white-0;
+
+    svg {
+      font-size: 2rem;
+    }
+  }
+}
+
+.button-arrow-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

@@ -1,0 +1,126 @@
+.public-offers-table {
+  width: 100%;
+
+  border-collapse: collapse;
+
+  thead {
+    width: 100%;
+    position: sticky;
+    background: $color-gray-300;
+    top: 158px;
+    z-index: 50;
+
+    tr {
+      text-align: left;
+
+      color: $color-text-800;
+      font-size: 1rem;
+      font-weight: 500;
+      vertical-align: bottom;
+
+      th {
+        padding: 10px 16px;
+      }
+    }
+  }
+
+  tbody {
+    tr:first-child {
+      th {
+        margin-top: 16px;
+      }
+    }
+
+    th {
+      height: 120px;
+      padding: 10px 0px 10px 16px;
+      text-align: left;
+
+      margin-bottom: 16px;
+    }
+  }
+
+  &__row {
+    h4 {
+      margin: 0 0 8px;
+
+      display: flex;
+      gap: 5px;
+      align-items: center;
+    }
+
+    strong {
+      font-size: 0.9rem;
+      color: $color-gray-text-3;
+      font-weight: 500;
+    }
+  }
+
+  &__row2 {
+    h4 {
+      margin: 0;
+    }
+
+    strong {
+      margin: 0 0 10px 20px;
+      font-size: 1rem;
+      color: $color-text-800;
+    }
+
+    &__column {
+      display: flex;
+      width: 165px;
+      justify-content: space-between;
+    }
+
+    &__plus {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      padding: 5px;
+
+      svg {
+        cursor: pointer;
+        font-size: 1.5rem;
+        margin-left: 10px;
+
+        background: $color-gray-300;
+        border-radius: 50%;
+
+        path {
+          fill: $color-primary-orange;
+        }
+
+        path:first-child {
+          fill: transparent;
+        }
+      }
+
+      @include tablet {
+        margin: 40px 0px;
+      }
+    }
+  }
+
+  &__name {
+    padding-left: 7px;
+    border-left: 3px solid $color-primary-orange;
+  }
+}
+
+.loader-container {
+  th {
+    height: 100px;
+  }
+
+  div {
+    display: flex;
+    justify-content: center;
+
+    svg {
+      width: 50px;
+      height: 50px;
+    }
+  }
+}

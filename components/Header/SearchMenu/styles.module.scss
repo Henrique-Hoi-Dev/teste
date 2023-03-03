@@ -1,0 +1,132 @@
+.search-popup {
+  display: flex;
+  width: 100%;
+
+  &__top-container {
+    div {
+      &:first-child {
+        cursor: pointer;
+        width: 2rem;
+        padding-top: 0.25rem;
+        padding-left: 0.25rem;
+        margin-left: auto;
+        margin-bottom: 1rem;
+      }
+      &:nth-of-type(2) {
+        width: 100%;
+        > input {
+          width: 80%;
+        }
+
+        @include tablet() {
+          > input {
+            width: 95%;
+          }
+        }
+
+        @include mobile() {
+          margin-top: 3rem;
+        }
+      }
+    }
+
+    h2 {
+      color: $color-white-0;
+
+      @include tablet() {
+        font-size: 3rem;
+      }
+
+      @include mobile() {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
+
+.not-found-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 3rem;
+  width: 80%;
+  text-align: center;
+  color: $color-white-0;
+
+  h4 {
+    font-size: 1.125rem;
+    font-weight: 700;
+    margin-bottom: 0;
+  }
+  p {
+    margin-top: 0;
+    font-size: 0.75rem;
+  }
+
+  @include tablet() {
+    width: 100%;
+  }
+
+  @include mobile() {
+    width: 80%;
+    gap: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.pagination-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.pagination-container {
+  color: $color-white-0;
+  width: 85%;
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  padding-top: 2rem !important;
+  gap: 1.5rem;
+  font-size: 0.75rem;
+  justify-content: flex-end;
+
+  a {
+    padding: 1rem;
+  }
+
+  @include tablet() {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  @include mobile() {
+    padding-left: 0;
+    gap: 0.5rem;
+    justify-content: center;
+    padding-right: 0.5rem;
+  }
+
+  &__active {
+    color: $color-primary-orange;
+  }
+}
+
+.pagination-loading-container {
+  display: flex;
+  width: 100%;
+  margin-top: 5rem;
+  align-items: center;
+  justify-content: center;
+  padding-right: 20%;
+  align-self: flex-start;
+
+  @include tablet() {
+    width: 95%;
+    padding-right: 0;
+  }
+}
+
+.pagination-loading-icon {
+  width: 48px;
+  height: 48px;
+}

@@ -1,0 +1,13 @@
+.videos-section-container {
+  background: $color-blue-text;
+
+  padding: 104px 0px;
+
+  @include tablet {
+    padding: 56px 0px;
+  }
+
+  @include mobile {
+    padding: 47px 0px;
+  }
+}

@@ -1,0 +1,86 @@
+.modal__wrapper {
+  position: fixed;
+  z-index: 1000;
+  width: 100vw;
+  height: 100vh;
+
+  top: 0;
+  background: $color-black-0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal {
+  transition: opacity 500ms ease-in-out;
+
+  width: 410px;
+  height: auto;
+
+  background: $color-gray-300;
+  border: none;
+  border-radius: 20px;
+  padding: 20px;
+
+  &__header {
+    text-align: left;
+
+    font-size: 1.125rem;
+    font-weight: 700;
+
+    color: $color-black-0;
+    margin: 0;
+  }
+
+  &__body {
+    max-height: 460px;
+    overflow-y: auto;
+
+    p {
+      color: $color-text-800;
+
+      font-family: "Inter", "sans-serif";
+      font-size: 1rem;
+      line-height: 1.5rem;
+      font-weight: 400;
+    }
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: flex-end;
+
+    button {
+      font-size: 1rem;
+      line-height: 1.5rem;
+
+      height: 40px;
+      width: 146px;
+      padding: 8px 16px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      gap: 8px;
+
+      svg {
+        animation: spin 2s linear infinite;
+
+        path {
+          stroke: $color-white-0;
+        }
+      }
+    }
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

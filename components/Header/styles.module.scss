@@ -1,0 +1,120 @@
+.navbar {
+  width: 100%;
+  height: 100px;
+
+  background: $color-white-0;
+  backdrop-filter: blur(20px);
+
+  display: flex;
+  align-items: center;
+
+  &__blue {
+    background-color: $color-background-800;
+    transition: background-color 0.2s ease;
+  }
+
+  &__logo {
+    cursor: pointer;
+
+    img {
+      width: 190px;
+      height: auto;
+    }
+  }
+
+  &__content {
+    @include desktop() {
+      min-width: 1100px;
+    }
+    @include tablet() {
+      width: 1100px;
+    }
+
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    a {
+      line-height: 150px;
+    }
+  }
+
+  section {
+    display: flex;
+  }
+
+  &__button_list {
+    margin: 47px 35px 0;
+  }
+
+  &__action_buttons {
+    margin: auto 16px;
+
+    a {
+      font-size: 1rem;
+    }
+
+    a:first-child {
+      margin-right: 30px;
+      font-weight: 500 !important;
+      color: $color-black-0;
+    }
+
+    @media (max-width: 1000px) {
+      display: none;
+    }
+  }
+
+  &__icon_buttons {
+    display: flex;
+    gap: 24px;
+
+    button {
+      @include btn-reset;
+    }
+  }
+
+  &__open-menu-btn {
+    display: none;
+
+    @media (max-width: 1000px) {
+      display: inline;
+    }
+  }
+}
+
+.header-container {
+  top: 0;
+  position: sticky;
+  max-width: 100vw;
+
+  z-index: 1000;
+}
+
+.themeBlue {
+  > button {
+    color: $color-white-100 !important;
+    transition: color 0.2s ease;
+  }
+
+  svg {
+    stroke: $color-white-100 !important;
+    transition: stroke 0.2s ease;
+  }
+}
+
+.subitem {
+  background-color: $color-background-800 !important;
+  transition: background-color 0.2s ease;
+
+  button {
+    color: $color-white-100 !important;
+  }
+}
+
+.linkTheme {
+  color: $color-white-100 !important;
+  transition: color 0.2s ease;
+}

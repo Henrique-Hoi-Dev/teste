@@ -1,0 +1,94 @@
+.whoWeAre-section {
+  background: $color-blue-text;
+  padding: 70px 0 0;
+
+  @include tablet {
+    padding: 1px 0 35px;
+  }
+
+  @include mobile {
+    padding: 35px 0 10px;
+  }
+
+  &__description {
+    padding-bottom: 25px;
+    font-size: 1.1rem;
+    line-height: 1.8rem;
+
+    width: 875px;
+
+    color: $color-white-100;
+
+    @include tablet {
+      width: 699px;
+      font-size: 1rem;
+      line-height: 1.875rem;
+
+      padding: 40px 0 0;
+    }
+
+    @include mobile {
+      width: 342px;
+      padding: 0;
+      margin-bottom: 45px;
+    }
+  }
+
+  &__content {
+    background: $color-blue-text;
+    padding: 1px 0 50px;
+
+    @include tablet {
+      padding: 140px 25px 30px;
+      background: $color-blue-text;
+      margin: -1px;
+    }
+
+    @include mobile {
+      margin: -1px;
+      padding: 1px 20px 35px;
+    }
+  }
+}
+
+.banner {
+  @include mobile {
+    padding: 90px 8px 8px !important;
+
+    p {
+      line-height: 1.875rem;
+    }
+  }
+
+  @include tablet {
+    p {
+      line-height: 1.875rem;
+    }
+  }
+}
+
+.card-content {
+  ul {
+    gap: 0;
+
+    @include tablet {
+      gap: 120px;
+    }
+
+    @include mobile {
+      gap: 40px;
+    }
+  }
+
+  * {
+    color: $color-white-100 !important;
+  }
+
+  p {
+    font-size: 1.1rem !important;
+
+    @include tablet {
+      font-size: 1rem !important;
+    }
+  }
+}

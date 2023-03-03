@@ -1,0 +1,131 @@
+.be-an-advisor-form-container {
+  margin: 80px 0px;
+
+  &__divider {
+    width: 86px;
+    height: 5px;
+    background: $color-primary-orange;
+  }
+
+  &__checkbox-outer-container {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    gap: 12px;
+  }
+
+  &__checkbox-inner-container {
+    display: flex;
+    flex-direction: row;
+    margin-right: auto;
+    gap: 8px;
+  }
+
+  &__form {
+    margin-top: 40px;
+    background: $color-white-0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    padding: 24px 96px;
+    box-shadow: 0px 64px 64px rgba(0, 0, 0, 0.09),
+      0px 16px 35px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+
+    @include mobile {
+      padding: 8px 24px 32px 24px;
+    }
+
+    &__subtitle {
+      align-self: flex-start;
+      margin: 48px 0px;
+      color: $color-gray-text;
+    }
+
+    &__inputs {
+      display: flex;
+      width: 100.4%;
+      justify-content: space-between;
+
+      @media screen and (max-width: 648px) {
+        flex-direction: column;
+        width: 100.8%;
+
+        input {
+          display: flex;
+          width: 205%;
+        }
+      }
+    }
+
+    button {
+      width: 159px;
+      height: 48px;
+
+      @include mobile {
+        align-self: flex-end;
+      }
+    }
+  }
+
+  .success-message-modal {
+    border: none;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+
+    padding: 48px 32px;
+
+    strong {
+      font-size: 1.75rem;
+      line-height: 2.5rem;
+      font-weight: 700;
+
+      text-align: center;
+      color: $color-text-800;
+    }
+
+    span {
+      font-size: 1rem;
+      color: $color-text-800;
+      text-align: center;
+    }
+
+    img {
+      width: 135px;
+      height: auto;
+    }
+  }
+}
+
+.inputPhone,
+.inputCPF {
+  width: 48.4%;
+}
+
+.label-button-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.label-button-text {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.label-text {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 0.75rem;
+  line-height: 1.5rem;
+  color: $color-black-0;
+}

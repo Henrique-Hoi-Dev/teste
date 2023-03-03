@@ -1,0 +1,300 @@
+.footer {
+  background: $color-white-0;
+  overflow: hidden;
+
+  &__logo {
+    width: 146px;
+    height: 52px;
+
+    @include mobile {
+      width: 112px;
+      height: 40px;
+    }
+  }
+
+  &__top-items {
+    border-bottom: 1px solid $color-gray-6;
+    background: $color-primary-orange;
+    padding: 16px 0px;
+
+    @include mobile {
+      padding: 8px 0px;
+    }
+
+    &__content {
+      @include container;
+
+      display: flex;
+
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &__social-networks-container {
+    display: flex;
+    gap: 25px;
+
+    a {
+      color: $color-white-100;
+      font-size: 1rem;
+
+      &:hover {
+        color: $color-white-100;
+      }
+    }
+
+    svg {
+      font-size: 1.5rem;
+      cursor: pointer;
+
+      @include mobile {
+        font-size: 1.2rem;
+      }
+
+      * {
+        stroke: $color-white-100;
+      }
+    }
+  }
+
+  &__menu {
+    margin: 24px 0px;
+
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+    flex-wrap: wrap;
+    gap: 6px;
+
+    ul {
+      @include tablet {
+        margin: 0;
+      }
+
+      margin-left: -40px;
+    }
+
+    @include tablet {
+      display: flex;
+      flex-direction: column;
+    }
+
+    @include mobile {
+      margin-top: -5px;
+    }
+
+    &__title {
+      @include button--terciary;
+
+      button,
+      a {
+        text-transform: uppercase;
+        color: $color-secondary-gray-1;
+      }
+
+      path {
+        stroke: $color-secondary-gray-1;
+      }
+
+      font-weight: 700;
+    }
+
+    &-item {
+      text-align: left;
+      margin-top: 40px;
+
+      @include mobile {
+        text-align: left;
+        margin-top: 32px;
+      }
+
+      &__stamps {
+        display: flex;
+        align-items: center;
+
+        @include tablet {
+          overflow: auto;
+          max-width: 100%;
+        }
+
+        @include mobile {
+          margin-top: 15px;
+        }
+      }
+    }
+
+    &__subitems {
+      display: flex;
+      flex-direction: column;
+      white-space: nowrap;
+
+      margin-top: 24px;
+      gap: 16px;
+
+      * {
+        font-size: 1rem;
+      }
+
+      @include tablet {
+        * {
+          font-size: 0.8rem;
+        }
+      }
+
+      :first-child {
+        margin-top: 0px;
+
+        @include mobile {
+          margin-top: 10px;
+        }
+      }
+
+      &:nth-of-type(2):nth-child(2) {
+        margin-bottom: 16px;
+      }
+    }
+
+    &__subitem {
+      text-transform: none;
+    }
+  }
+
+  &__decrease_margin {
+    margin-top: -8px;
+  }
+
+  &__submenu__title {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: $color-secondary-gray-1;
+    text-transform: uppercase;
+  }
+
+  &__submenu-item {
+    text-transform: none;
+  }
+
+  &__download-app {
+    margin-top: 16px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 8px;
+
+    img {
+      max-width: 133px;
+      cursor: pointer;
+    }
+
+    @include mobile {
+      flex-direction: row;
+    }
+  }
+
+  &__privacy-policy {
+    * {
+      font-size: 1rem;
+      font-weight: 400;
+      opacity: 70%;
+    }
+  }
+
+  &__address {
+    margin-top: -8px;
+    max-width: 120px;
+    white-space: pre;
+    color: $color-secondary-gray-1;
+  }
+
+  &__lgpd_title {
+    @extend .footer__submenu__title;
+    margin-bottom: -8px;
+  }
+
+  &__telephone {
+    @include button--terciary;
+  }
+
+  &__stamp {
+    margin-right: 9px;
+
+    &__divider {
+      width: 1px;
+      height: 60px;
+      background: $color-gray-350;
+
+      margin: 0px 21px;
+    }
+  }
+
+  &__bottom {
+    border-top: 1px solid $color-gray-6;
+    padding: 16px 0px;
+    text-align: left;
+
+    > div {
+      display: flex;
+      align-items: center;
+
+      button,
+      a {
+        margin: 0px 8px;
+        background: none;
+      }
+
+      button {
+        padding: 0px;
+      }
+    }
+
+    @include tablet {
+      border-top: none;
+
+      > div {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+
+        > button,
+        > a {
+          width: 100%;
+
+          padding: 0;
+          margin: 0;
+
+          text-align: left;
+
+          border-bottom: 1px solid $color-gray-6;
+          background: none;
+          border-radius: 0;
+        }
+      }
+    }
+
+    &__reguladores {
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+
+      @include mobile {
+        border-bottom: 1px solid $color-gray-6;
+      }
+
+      a {
+        width: auto;
+      }
+
+      strong {
+        color: $color-secondary-gray-1;
+        font-weight: 400;
+      }
+    }
+
+    span {
+      color: $color-secondary-gray-1;
+      font-size: 1rem;
+    }
+  }
+}

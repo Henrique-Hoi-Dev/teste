@@ -1,0 +1,54 @@
+.portability-section {
+  &__breadcrumb {
+    position: absolute;
+    top: 0px;
+
+    @include tablet {
+      display: none;
+    }
+
+    a {
+      color: $color-primary-orange;
+    }
+
+    span,
+    strong {
+      color: $color-text-100;
+    }
+
+    > div {
+      margin: 0 auto !important;
+    }
+  }
+
+  &__content {
+    width: 100%;
+    margin-top: 0px;
+
+    background: $color-blue-text;
+
+    padding: 104px 0px;
+
+    @include mobile {
+      padding: 48px 0px;
+    }
+
+    p {
+      color: $color-text-100;
+      margin-top: 0px;
+      margin-bottom: 56px;
+
+      @include tablet {
+        margin-bottom: 48px;
+      }
+    }
+
+    section {
+      margin-bottom: 56px;
+
+      @include tablet {
+        margin-bottom: 48px;
+      }
+    }
+  }
+}
