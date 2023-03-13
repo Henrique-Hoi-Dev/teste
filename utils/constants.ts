@@ -1,3 +1,0 @@
-export const THIRTY_MINUTES = 1800;
-
-export const PAGE_REGENERATION_TIME = THIRTY_MINUTES;
